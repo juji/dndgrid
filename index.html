@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>	<html class="ie ie6 lte10 lte9 lte8 lte7" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><![endif]-->
+<!--[if IE 7]>		<html class="ie ie7 lte10 lte9 lte8" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><![endif]-->
+<!--[if IE 8]>		<html class="ie ie8 lte10 lte9" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><![endif]-->
+<!--[if IE 9]>		<html class="ie ie9 lte10" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><![endif]-->
+<!--[if gt IE 9]>	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><![endif]-->
+<!--[if !IE]><!-->	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" ><!--<![endif]-->
+	<head>
+		<title>DND grid example</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="jquery.dndgrid.min.js"></script>
+		<style>
+			html,body{width:100%;height:100%;margin:0;padding:0;}
+			body{padding:52px;}
+			.image{width:300px;height:300px;background-size:cover;display:inline-block;}
+			.image .dnd-trigger{
+				width:34px;height:34px;
+				background-color:white;
+				background-image:url('https://lh6.googleusercontent.com/-Zei8vkGyBWE/U6cCEnCgMfI/AAAAAAAAB3U/1RN13TkZlSo/s16/icon-drag.png');
+				background-position:center center;
+				background-repeat:no-repeat;
+			}
+			.dnd-grid{font-size:0;}
+		</style>
+	</head>
+	<body>
+		<h2>dndgrid Example</h2>
+		<div class="dnd-grid">
+			<div class="dnd-gridcell image" style="background-image:url('https://lh3.googleusercontent.com/-uMtehU6YicI/UcoFIv7-ebI/AAAAAAAASNY/4EwcuR5PieI/s400/SAM_1194-Edit-Edit-2-Edit-Edit.JPG');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh4.googleusercontent.com/-MlzebY0K_gw/UfGJB6ejIwI/AAAAAAAAYBA/wjWDk40CH88/s400/13%2520-%25201.jpg');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh5.googleusercontent.com/-K_vstjDtYsc/Ucig426hBqI/AAAAAAAAB4E/Dn_xbQo3RhE/s400/FB%2520Corn.jpg');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh5.googleusercontent.com/-Q9Ftx8X-57U/Udsw7b3EzdI/AAAAAAAABz0/L8au7Qed9O4/s400/Calla%2520Lilies%2520and%2520Sunset.jpg');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh6.googleusercontent.com/-xbjtM5vFqeQ/UhV4Z3wJXHI/AAAAAAAAERs/eWWLq326pFg/s400/wiltonhouse-salisbury-side-christopherstravels--3-X3.jpg');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh4.googleusercontent.com/-lnAc8fP_kKo/UfXipOpWqCI/AAAAAAAAdB4/LVMmxINZS1U/s400/Process.jpg');"></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh3.googleusercontent.com/-U264-5VZhZQ/Ucti-ph5iQI/AAAAAAAAX9o/iHWYjobe6Ok/s400/13_06_15_Underwater_session_00690.jpg');"></div>			
+		</div>
+		<br /><br />
+		<h2>dndgrid Example (with trigger)</h2>
+		<div class="dnd-grid">
+			<div class="dnd-gridcell image" style="background-image:url('https://lh3.googleusercontent.com/-uMtehU6YicI/UcoFIv7-ebI/AAAAAAAASNY/4EwcuR5PieI/s400/SAM_1194-Edit-Edit-2-Edit-Edit.JPG');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh4.googleusercontent.com/-MlzebY0K_gw/UfGJB6ejIwI/AAAAAAAAYBA/wjWDk40CH88/s400/13%2520-%25201.jpg');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh5.googleusercontent.com/-K_vstjDtYsc/Ucig426hBqI/AAAAAAAAB4E/Dn_xbQo3RhE/s400/FB%2520Corn.jpg');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh5.googleusercontent.com/-Q9Ftx8X-57U/Udsw7b3EzdI/AAAAAAAABz0/L8au7Qed9O4/s400/Calla%2520Lilies%2520and%2520Sunset.jpg');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh6.googleusercontent.com/-xbjtM5vFqeQ/UhV4Z3wJXHI/AAAAAAAAERs/eWWLq326pFg/s400/wiltonhouse-salisbury-side-christopherstravels--3-X3.jpg');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh4.googleusercontent.com/-lnAc8fP_kKo/UfXipOpWqCI/AAAAAAAAdB4/LVMmxINZS1U/s400/Process.jpg');"><div class="dnd-trigger"></div></div>
+			<div class="dnd-gridcell image" style="background-image:url('https://lh3.googleusercontent.com/-U264-5VZhZQ/Ucti-ph5iQI/AAAAAAAAX9o/iHWYjobe6Ok/s400/13_06_15_Underwater_session_00690.jpg');"><div class="dnd-trigger"></div></div>
+		</div>
+	</body>
+</html>
