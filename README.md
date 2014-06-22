@@ -3,6 +3,7 @@ dndgrid
 
 Drag and drop grid element plugin for jQuery
 
+Example > http://juji.github.io/dndgrid/
 
 **Auto initialization**
 ```html
