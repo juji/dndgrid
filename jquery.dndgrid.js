@@ -52,6 +52,7 @@
 			c.css({
 				'top':(tpos.top - scrl.top)+'px',
 				'left':(tpos.left - scrl.left)+'px',
+				'z-index':200,
 				'position':'fixed','width':tdim.width,'height':tdim.height,
 				'opacity':'.8'
 			}).addClass('dndclonedragged');
