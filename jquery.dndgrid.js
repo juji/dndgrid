@@ -24,6 +24,7 @@
 		trigger.on('mousedown',function(e){
 			
 			var parent = $(this).is('.dndsortactive') ? $(this) : $(this).parents('.dndsortactive').get(0);
+			var grid = $(this).parents('.dnd-grid').first();
 			
 			//mouse position
 			var mpos = {'top':e.pageY,'left':e.pageX};
@@ -73,7 +74,7 @@
 				});
 				
 				$('.intersected').removeClass('intersected');
-				var inter = __dndgrid.check(cc,block);
+				var inter = __dndgrid.check(cc,block,grid);
 				if(inter.left && !inter.left.is(ori)){
 					inter.left.before(ori);
 				}else if(inter.right && !inter.right.is(ori)){
@@ -102,8 +103,8 @@
 		.unbind('mousemove.dndgrid');
 	}
 	
-	__dndgrid.check = function(dragged,block){
-		var others = $('.dndsortactive').removeClass('intersected');
+	__dndgrid.check = function(dragged,block,grid){
+		var others = $(grid).find('.dndsortactive').removeClass('intersected');
 		//dragged pos and dimension
 		var dposdim = __dndgrid.posdim(dragged);
 		
