@@ -61,7 +61,7 @@
 			
 			var droparea = __dndgrid.posdim($(this).parent());
 			
-			$('body').on('mousemove',function(ev){
+			$('body').on('mousemove.dndgrid',function(ev){
 				
 				var moupos = {'top':ev.pageY,'left':ev.pageX};
 				var cc = $('.dndclonedragged');
@@ -80,7 +80,7 @@
 					inter.right.after(ori);
 				}
 				
-			}).on('mouseup',function(){
+			}).on('mouseup.dndgrid',function(){
 				var cc = $('.dndclonedragged');
 				var ori = $('.dndobject');
 				
@@ -98,8 +98,8 @@
 	}
 	
 	__dndgrid.off = function(dragged){
-		$('body').unbind('mouseup')
-		.unbind('mousemove');
+		$('body').unbind('mouseup.dndgrid')
+		.unbind('mousemove.dndgrid');
 	}
 	
 	__dndgrid.check = function(dragged,block){
