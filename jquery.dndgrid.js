@@ -55,7 +55,7 @@
 				'z-index':200,
 				'position':'fixed','width':tdim.width,'height':tdim.height,
 				'opacity':'.8'
-			}).addClass('dndclonedragged');
+			}).addClass('dndclonedragged').removeClass('dndsortactive');
 			
 			$('body').append(c);
 			
