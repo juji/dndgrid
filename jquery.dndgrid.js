@@ -76,10 +76,10 @@
 				
 				$('.intersected').removeClass('intersected');
 				var inter = __dndgrid.check(cc,block,grid);
-				if(inter.left && !inter.left.is(ori)){
+				if(inter.left && !inter.left.is(ori) && !inter.left.prev().is(ori)){
 					inter.left.before(ori);
 					ori.trigger('placed');
-				}else if(inter.right && !inter.right.is(ori)){
+				}else if(inter.right && !inter.right.is(ori) && !inter.right.next().is(ori)){
 					inter.right.after(ori);
 					ori.trigger('placed');
 				}
