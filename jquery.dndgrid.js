@@ -78,9 +78,10 @@
 				var inter = __dndgrid.check(cc,block,grid);
 				if(inter.left && !inter.left.is(ori)){
 					inter.left.before(ori);
-					setTimeout(function(){ori.addClass('dnd-shown');},200);
+					ori.trigger('placed');
 				}else if(inter.right && !inter.right.is(ori)){
 					inter.right.after(ori);
+					ori.trigger('placed');
 				}
 				
 			}).off('mouseup.dndgrid')
@@ -208,7 +209,7 @@
 		trigger = typeof par.trigger == 'undefined' ? false : par.trigger;
 		
 		return this.each(function(){
-			if($(this).data('dndgrid')) return true;ori.addClass('dnd-placed');
+			if($(this).data('dndgrid')) return true;
 			$(this).data('dndgrid', true);
 			__dndgrid.activate($(this),trigger);
 		});

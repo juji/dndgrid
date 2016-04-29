@@ -26,6 +26,25 @@ Example > http://juji.github.io/dndgrid/
 </div>
 ```
 
+**Events**
+Placed
+---
+When moved, the event `placed` will be triggered.
+```
+$('dnd-gridcell').on('placed',function(){
+  // moved but not dropped yet.
+})
+```
+
+Dropped
+---
+When moved, the event `dropped` will be triggered.
+```
+$('dnd-gridcell').on('dropped',function(){
+  // Dropped. The move is permanent.
+})
+```
+
 
 
 **Self initilization**
