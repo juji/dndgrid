@@ -11,17 +11,17 @@
 	__dndgrid.activate = function(elm,trigger){
 		elm = $(elm);
 		if(!trigger) {
-			if($('.dnd-trigger',elm).length) trigger = $('.dnd-trigger',elm);
+			if(elm.find('.dnd-trigger').length) trigger = elm.find('.dnd-trigger');
 			else trigger = elm;
 		}else{
-			trigger = $(trigger,elm);
+			trigger = elm.find(trigger);
 		}
 		
 		elm.data('dndsortclone',elm.clone());
 		trigger.css('cursor','move');
 		$(elm).addClass('dndsortactive');
 		
-		trigger.on('mousedown',function(e){
+		trigger.off('mousedown').on('mousedown',function(e){
 			
 			var parent = $(this).is('.dndsortactive') ? $(this) : $(this).parents('.dndsortactive').get(0);
 			var grid = $(this).parents('.dnd-grid').first();
@@ -62,7 +62,8 @@
 			
 			var droparea = __dndgrid.posdim($(this).parent());
 			
-			$('body').on('mousemove.dndgrid',function(ev){
+			$('body').off('mousemove.dndgrid')
+			.on('mousemove.dndgrid',function(ev){
 				
 				var moupos = {'top':ev.pageY,'left':ev.pageX};
 				var cc = $('.dndclonedragged');
@@ -77,11 +78,13 @@
 				var inter = __dndgrid.check(cc,block,grid);
 				if(inter.left && !inter.left.is(ori)){
 					inter.left.before(ori);
+					setTimeout(function(){ori.addClass('dnd-shown');},200);
 				}else if(inter.right && !inter.right.is(ori)){
 					inter.right.after(ori);
 				}
 				
-			}).on('mouseup.dndgrid',function(){
+			}).off('mouseup.dndgrid')
+			.on('mouseup.dndgrid',function(){
 				var cc = $('.dndclonedragged');
 				var ori = $('.dndobject');
 				
@@ -205,7 +208,7 @@
 		trigger = typeof par.trigger == 'undefined' ? false : par.trigger;
 		
 		return this.each(function(){
-			if($(this).data('dndgrid')) return true;
+			if($(this).data('dndgrid')) return true;ori.addClass('dnd-placed');
 			$(this).data('dndgrid', true);
 			__dndgrid.activate($(this),trigger);
 		});
