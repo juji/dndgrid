@@ -25,6 +25,17 @@
 			}
 			.dnd-grid{font-size:0;}
 		</style>
+		<script>
+			$(function(){
+				$('.dnd-gridcell').on('placed',function(){
+					console.log('It\'s placed');
+					console.log(this);
+				}).on('dropped',function(){
+					console.log('It\'s dropped');
+					console.log(this);
+				});
+			})
+		</script>
 	</head>
 	<body>
 		<h2>dndgrid Example</h2>
