@@ -5,7 +5,7 @@ Drag and drop grid element plugin for jQuery
 
 Example > http://juji.github.io/dndgrid/
 
-**Auto initialization**
+## Auto initialization
 ```html
 <div class="dnd-grid">
   <div class="dnd-gridcell" style=" ... "></div>
@@ -16,7 +16,7 @@ Example > http://juji.github.io/dndgrid/
 ```
 
 
-**with another drag trigger**
+## with another drag trigger
 ```html
 <div class="dnd-grid">
   <div class="dnd-gridcell" style=" ... "> <span style=" ... " class="dnd-trigger"></span> </div>
@@ -26,9 +26,8 @@ Example > http://juji.github.io/dndgrid/
 </div>
 ```
 
-**Events**
-Placed
----
+## Events
+**Placed**
 When moved, the event `placed` will be triggered.
 ```
 $('dnd-gridcell').on('placed',function(){
@@ -36,8 +35,7 @@ $('dnd-gridcell').on('placed',function(){
 })
 ```
 
-Dropped
----
+**Dropped**
 When moved, the event `dropped` will be triggered.
 ```
 $('dnd-gridcell').on('dropped',function(){
@@ -47,7 +45,7 @@ $('dnd-gridcell').on('dropped',function(){
 
 
 
-**Self initilization**
+## Self initilization
 ```javascript
 $(function(){ 
 
